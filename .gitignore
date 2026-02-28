@@ -1,0 +1,12 @@
+# API KEY
+.env
+#java class
+*.class
+bin/
+out/
+#library files
+lib/
+
+resources/register.csv
+
+.vscode/
