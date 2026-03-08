@@ -32,6 +32,8 @@ the magic school has four main clubs Gryffindor,Slytherin,Hufflepuff and Rawencl
 
 ![Result](img/software_images/housebanner.png)
 
+![Result](img/software_images/Diagram.png)
+
 ---
 
 ## 🛠️ Tech Stack
