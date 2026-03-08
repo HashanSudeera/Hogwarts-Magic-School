@@ -3,25 +3,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
-//using env variables for API_KEY
-import java.io.FileInputStream;
-import java.util.Properties;
+
 
 public class AISorthat {
 
-    private static final Properties env = new Properties();
-    
-    // 2. Load the .env file exactly once when the program starts
-    static {
-        try {
-            env.load(new FileInputStream(".env"));
-        } catch (Exception e) {
-            System.err.println("Error: Could not find or load the .env file! Make sure it is in your main folder.");
-        }
-    }
     // --- CONFIGURATION ---
     private static final String API_URL = "https://openrouter.ai/api/v1/chat/completions";
-    private static final String API_KEY = env.getProperty("API_KEY");
+    private static final String API_KEY = System.getenv("API_KEY");
     private static final String MODEL = "stepfun/step-3.5-flash:free";
 
     public static String callSortingHat(String name, String dis) {
